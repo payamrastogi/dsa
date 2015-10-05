@@ -1,41 +1,16 @@
 package ds;
 
-// Node class to keep the data
-class Node<T>{
-	private T data;
-	private Node<T> next;
-	
-	Node(T data, Node<T> node){
-		this.data = data;
-		this.next = node;
-	}
-	
-	public T getData() {
-		return data;
-	}
 
-	public void setData(T data) {
-		this.data = data;
-	}
-
-	public Node<T> getNext() {
-		return next;
-	}
-
-	Node(Node<T> node){
-		this.next = node;
-	}
-	
-	public Node<T> setNext(Node<T> node){
-		this.next = node;
-		return this.next;
-	}
-}
 
 // Link of Nodes
 public class LinkedList<T> {
+	// node with the null value
 	private Node<T> head;
+	// node we can move to get the item
+	// points to the node previous to the node
+	// we want the item to add/look
 	protected Node<T> curr;
+	// the last node with the item
 	private Node<T> tail;
 	private int len = 0;
 	
