@@ -2,7 +2,7 @@ package ds;
 
 import java.util.ArrayList;
 
-public class BSTree<T extends Comparable<? super T>>{
+public class BSTree<T extends Comparable<T>>{
 	private BSTNode<T> root;
 	private int nodeCount;
 	
@@ -71,7 +71,7 @@ public class BSTree<T extends Comparable<? super T>>{
 			BSTNode<T> tmp = getMin(r.getRight());
 			// replace value with min
 			r.setItem(tmp.getItem());
-			// delete the min node and reset the right child tree
+			// delete the min node
 			r.setRight(deleteMin(r.getRight()));
 			
 		}
